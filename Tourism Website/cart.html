@@ -1,0 +1,119 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Add necessary CSS and other meta tags -->
+  <title>Cart</title>
+  <style>
+    .product-image {
+      width: 300px;
+      height: 250px;
+      border-radius:10px;
+    }
+    p{
+      font-size:25px;
+    }
+    #cart-items{
+    
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+     
+      }
+      button{
+        font-size:18px;
+        padding:8px;
+        justify-content: center;
+        align-items: center;
+
+      }
+      *{
+        margin:auto;
+        padding:4px;
+        box-sizing: border-box;
+      }
+      h1{
+        margin:20px 0px;
+        
+      }
+      p{
+        font-size:22px;
+      }
+
+      #final{
+        text-align:center;
+        font-size:28px;
+      }
+      input,button[type="text"]{
+        padding:8px;
+        font-size:15px;
+      }
+    
+  </style>
+</head>
+<body>
+  <h1 align="center">CART</h1>
+
+  <ul id="cart-items"></ul>
+  <br>
+
+  <p id="final">Total: <input type="text" placeholder="" id="total" size="20" disabled/>&emsp;<a href="pay.html"><button>Pay Now</button></a></p>
+ 
+
+
+
+  <script>
+    var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    var k=0;
+    function removeItem(index) {
+      cartItems.splice(index, 1);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      renderCart();
+    }
+
+    function renderCart() {
+      var cartItemsList = document.getElementById('cart-items');
+      while (cartItemsList.firstChild) {
+        cartItemsList.removeChild(cartItemsList.firstChild);
+      }
+      cartItems.forEach(function(item, index) {
+        var listItem = document.createElement('li');
+    
+        var productImage = document.createElement('img');
+        productImage.src = item.image;
+        // Remove the alt attribute or set it to an empty string
+        productImage.className = 'product-image';
+        listItem.appendChild(productImage);
+    
+        var productInfo = document.createElement('p');
+        productInfo.textContent =  item.name ;
+        listItem.appendChild(productInfo);
+        var productInfo = document.createElement('p');
+        productInfo.textContent =  'Accomodation: '+item.acc ;
+        listItem.appendChild(productInfo);
+        var productInfo = document.createElement('p');
+        productInfo.textContent =  'Price per Night: '+item.price ;
+        listItem.appendChild(productInfo);
+        var productInfo=document.createElement('br');
+        listItem.appendChild(productInfo);
+    
+        var removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.addEventListener('click', function() {
+          removeItem(index);
+        });
+        listItem.appendChild(removeButton);
+    
+        cartItemsList.appendChild(listItem);
+
+        k=k+item.price;
+      });
+    }
+    
+
+    renderCart();
+    document.getElementById('total').value=k;
+  </script>
+</body>
+</html>

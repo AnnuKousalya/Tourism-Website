@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assam</title>
+  <link rel="stylesheet" href="tourcss.css">
+</head>
+<body>
+    <div class="places-text">
+        <h3>TOURISM IN ASSAM</h3>
+        <h4>FEATURED PLACES</h4>
+    </div>
+    <div class="card_main">
+    <div class="card">
+        <div class="card-image">
+          <img src="https://www.trawell.in/admin/images/upload/059949714Kaziranga_Kakochang_Falls.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b>Kakochang Waterfalls</b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>Kakochang waterfall is also a well-known tourist attraction/picnic spot near Kaziranga. The remains of the historical Numaligarh can also be viewed from this place. </p>
+          <p class="location" ><a href="https://goo.gl/maps/eZtc9FvMckFF5Mpn8"><i class="bi bi-geo-alt-fill"></i>Kaziranga,Assam</a></p>
+          <br><p class="location" ><button onclick="addToCart('Kakochang Waterfalls',9000,'Q hotel','https://www.trawell.in/admin/images/upload/059949714Kaziranga_Kakochang_Falls.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="https://cdn.tripuntold.com/media/photos/location/2018/11/28/905c6981-b5ea-4e3b-93ed-3678d0405f40.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b>Haflong Lake </b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>Haflong Lake is not only beautiful but a fun place to be at too. The lake has water sports activities and boating facilities. </p>
+          <p class="location" ><a href="https://goo.gl/maps/MwG8FSn7Kih9q2XSA"><i class="bi bi-geo-alt-fill"></i>Haflong,Assam</a></p>
+          <br><p class="location" ><button onclick="addToCart('Haflong Lake',8000,'W hotel','https://cdn.tripuntold.com/media/photos/location/2018/11/28/905c6981-b5ea-4e3b-93ed-3678d0405f40.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="https://www.mytirthindia.com/uploads/2/2019-09/umananda.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b> Umananda Island</b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>Umananda Island is the smallest inhabited river islet in the middle of river Brahmaputra, flowing through the city of Guwahati in Assam, a state in northeast India. </p>
+          <p class="location" ><a href="https://goo.gl/maps/Pj8ub7mDqeaywagJA"><i class="bi bi-geo-alt-fill"></i>Guwahati,Assam </a></p>
+          <br><p class="location" ><button onclick="addToCart('Umananda Island',10000,'E Hotel','https://www.mytirthindia.com/uploads/2/2019-09/umananda.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Kamakhya_Guwahati.JPG/640px-Kamakhya_Guwahati.JPG" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b>Kamakhya Temple </b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>The Kamakhya Temple at Nilachal hills in Guwahati, Assam is one of the oldest and most revered centres of Tantric practices,[3] dedicated to the goddess Kamakhya.</p>
+          <p class="location" ><a href="https://goo.gl/maps/KSQ53rbwsH83XMJq8"><i class="bi bi-geo-alt-fill"></i>Guwahati,Assam</a></p>
+          <br><p class="location" ><button onclick="addToCart('Kamakya hotel',6000,'r Hotel','https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Kamakhya_Guwahati.JPG/640px-Kamakhya_Guwahati.JPG')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Beauty_of_Kaziranga_National_Park.jpg/284px-Beauty_of_Kaziranga_National_Park.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b> Kaziranga National Park:</b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>Kaziranga National Park is a national park in the Golaghat and Nagaon districts of the state of Assam, India. The park, 
+            which hosts two-thirds of the world's Indian rhinoceroses, is a UNESCO World Heritage Site.</p>
+          <p class="location" ><a href="https://goo.gl/maps/SBZAiFJvbEDurATx7"><i class="bi bi-geo-alt-fill"></i> Golaghat,Assam </a></p>
+          <br><p class="location" ><button onclick="addToCart('Kaziranga National Park',2000,'T Hotel','https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Beauty_of_Kaziranga_National_Park.jpg/284px-Beauty_of_Kaziranga_National_Park.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+     
+    </div>
+</body>
+<script>
+  function addToCart(productName, price, acc, image) {
+    console.log(productName, price, acc, image);
+    var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    var isItemInCart = cartItems.some(function(item) {
+      return item.name === productName;
+    });
+
+    if (isItemInCart) {
+      alert('This item is already in your cart!');
+      return;
+    }
+
+    cartItems.push({ name: productName, price: price, acc: acc, image: image });
+    //console.log(cartItems)
+    
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+    alert('Item added to cart successfully!');
+  }
+</script>
+</html>

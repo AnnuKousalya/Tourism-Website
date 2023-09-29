@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search Page</title>
+    <link rel="stylesheet" href="tourcss.css">
+</head>
+<body>
+        <!--===========Nav Bar=================-->
+        <section class="nav-bar">
+            <div class="logo">T<span>ourism</span></div>
+            <ul class="menu">
+                <li class="lic"><a href="main.html" target="_blank">Main page</a></li>
+                <li class="lic"><a href="book.html" target="_blank">tours</a></li>
+                <li class="lic"><a href="#" target="_blank">Reviews</a></li>
+                <li class="lic"><a href="cart.html">Cart</a></li>
+                <li class="lic"><a href="abt.html" target="_blank">about us</a></li>
+                <li class="login"><button  onclick = "window.location.href='main.html'">Logout</button> </li>                                                                                   
+            </ul>
+          
+        </section>
+    
+
+        <section class="banner">
+            <div class="banner-text-item">
+                <div class="banner-heading">
+                    <h1>Find<span>&ensp;Pieces</span>&ensp;of<span>&ensp;Heaven</span>&ensp;on<span>&ensp;Earth</span></h1>
+                </div>
+                <form class="form">
+                    <input type="text" list="mylist" id="value" placeholder="Where would you like to go?">
+                    <datalist id="mylist">
+                        <option>Assam</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Delhi</option>
+                        <option>Gujarat</option>
+                        <option>Goa</option>
+                        <option>Meghalaya</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Orissa</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Tamil Nadu</option>
+                        <option>Telangana</option>
+                        <option>Uttarkhand</option>
+                        <option>Uttar Pradesh</option>
+                        <option>West Bengal</option>
+                    </datalist>
+                   
+                    <button class="book" onclick="fun() "> Explore now</button>
+                </form>
+            </div>
+        </section>
+       <script>
+           function fun(){
+           var v=document.getElementById('value').value;
+        if (v=='Assam'){
+               window.open('assam.html');
+              
+        }
+        else if (v=='Meghalaya'){
+              window.open('meghalaya.html');
+        }
+           if (v=='Punjab'){
+            window.open('punjab.html');
+        }
+        if (v=='Gujarat'){
+            window.open('gj.html');
+        }
+        if (v=='Delhi'){
+            window.open('del.html');
+        }
+        if (v=='Telangana'){
+            window.open('ts.html');
+        }
+        if (v=='Andhra Pradesh'){
+            window.open('ap.html');
+        }
+        if (v=='Rajasthan'){
+            window.open('rajasthan.html');
+        }
+        if (v=='Uttarakhand'){
+            window.open('uk.html');
+        }
+        if (v=='Uttar Pradesh'){
+            window.open('up.html');
+        }
+        if (v=='Madhya Pradesh'){
+            window.open('mp.html');
+        }
+        if (v=='Orissa'){
+            window.open('orissa.html');
+        }
+        if (v=='West Bengal'){
+            window.open('wb.html');
+        }
+        if (v=='Goa'){
+            window.open('goa.html');
+        }
+        if (v=='Tamil Nadu'){
+            window.open('tn.html');
+        }
+        }
+
+       </script>
+       
+</body>
+</html>

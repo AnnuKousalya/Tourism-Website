@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main page</title>
+    <link rel="stylesheet" href="tourcss.css">
+<style>
+
+* {box-sizing: border-box;
+}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;
+height:90vh;
+   width:100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height:100%;
+  position: relative;
+  margin: 0;
+}
+
+/* Caption text */
+.text {
+    background-color: rgb(39, 203, 245);
+  color: #ffffff;
+  font-size: 35px;
+  font-weight:bolder;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    background-color: rgb(39, 203, 245);
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+    <section class="nav-bar">
+        <div class="logo">T<span>ourism</span></div>
+        <ul class="menu">
+            <li class="lic"><a href="tour.html" target="_blank">home</a></li>
+            <li class="lic"><a href="book.html" target="_blank">tours</a></li>
+            <li class="lic"><a href="#" target="_blank">Reviews</a></li>
+            <li class="lic"><a href="#">Packages</a></li>
+            <li class="lic"><a href="abt.html" target="_blank">about us</a></li>
+            <li class="login"><button  onclick = "window.location.href='login.html'">Login</button> </li>                                                                                   
+        </ul>
+      
+    </section>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+   
+  <div class="numbertext">1 / 5 <br></div>
+  
+  <img src="https://youmatter.world/app/uploads/sites/2/2019/11/travel-world.jpg" >
+  <div class="text"> Explore the World</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="https://blog.thomascook.in/wp-content/uploads/2017/01/fairypools.jpg">
+  <div class="text">Adventure</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="https://s1.travix.com/blog/as/asia-vietnam-halong-bay-boats-blue-water-sunny-small.jpg">
+  <div class="text">Search the beauty of Nature</div>
+</div>
+<div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="https://www.travellens.co/content/images/2021/07/Banff-National-Park-.jpg">
+    <div class="text">Travel in quest of Knowledge</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="https://static.toiimg.com/thumb/msid-92089121,width-748,height-499,resizemode=4,imgsize-139308/.jpg">
+    <div class="text">Destination To Knock</div>
+  </div>
+    
+
+  
+</div>
+<br>
+
+<div style="text-align:center" bgcolor="blue">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+<br>
+<div class="footer">
+    <div class="links">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#Offers">Offers & Discounts</a></li>
+            <li><a href="#coupon">Get Coupon</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="abt.html">About us</li>
+        </ul>
+    </div>
+    <div class="links">
+        <h3>Support</h3>
+        <ul>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+            <li><a href="#report">Report a Payment Issue</a></li>
+            <li><a href="#tnc">Terms & Conditions</a></li>
+            <li><a href="#pp">Privacy Policy</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 

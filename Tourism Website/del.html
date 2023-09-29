@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>delhi</title>
+  <link rel="stylesheet" href="tourcss.css">
+</head>
+<body>
+    <div class="places-text">
+        <h3>TOURISM IN DELHI </h3>
+        <h4>FEATURED PLACES</h4>
+    </div>
+    <div class="card_main">
+    <div class="card">
+        <div class="card-image">
+          <img src="https://holidify.com/images/attr_wiki/compressed/attr_wiki_4067.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b> Akshardham Temple</b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p> Akshardham Temple, also known as Swaminarayan Akshardham is dedicated to Lord Swaminarayan. It is known for its stunning architecture.</p>
+          <p class="location" ><a href="https://goo.gl/maps/e94euEk38wapiorW9"><i class="bi bi-geo-alt-fill"></i>Delhi </a></p>
+          <br><p class="location" ><button onclick="addToCart('Akshardham Temple',1500,'R Hotel','https://holidify.com/images/attr_wiki/compressed/attr_wiki_4067.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="https://www.holidify.com/images/cmsuploads/compressed/temple-93446_960_720_20180302141228.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b>Lotus Temple</b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>The Lotus Temple is one of the seven Baha'i House of Worship present around the world. Known for its stunning white petal lotus architecture,</p>
+          <p class="location" ><a href="https://goo.gl/maps/urdbirRtxhkdn9jK6"><i class="bi bi-geo-alt-fill"></i>Delhi </a></p>
+          <br><p class="location" ><button onclick="addToCart('Lotus Temple',3000,'K Hotel','https://www.holidify.com/images/cmsuploads/compressed/temple-93446_960_720_20180302141228.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="https://www.holidify.com/images/cmsuploads/compressed/attr_wiki_1765_20191212124429.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b>Lodhi Gardens </b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>Lodhi Gardens is a city park placed in New Delhi, spanning over 90 acres. It is a luscious garden that houses the tombs of Sayyid ruler Mohammed Shah</p>
+          <p class="location" ><a href="https://goo.gl/maps/5YkrXeDANYJYMzbv9"><i class="bi bi-geo-alt-fill"></i>Delhi </a></p>
+          <br><p class="location" ><button onclick="addToCart('Lodhi gardens',2500,'Q Hotel','https://www.holidify.com/images/cmsuploads/compressed/attr_wiki_1765_20191212124429.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="https://www.holidify.com/images/cmsuploads/compressed/BanglaSahib_20200417130034.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b>Gurudwara Bangla Sahib</b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>Gurudwara Bangla Sahib is one of the most important Sikh gurdwara, aka Sikh house of worship, in Delhi, India and known for its association with the eighth Sikh Guru</p>
+          <p class="location" ><a href="https://goo.gl/maps/L8jEeLDovXTCCViaA"><i class="bi bi-geo-alt-fill"></i>Gurudwara,Delhi </a></p>
+          <br><p class="location" ><button onclick="addToCart('Gurudwara Bangla Sahib',3000,'P Hotel','https://www.holidify.com/images/cmsuploads/compressed/BanglaSahib_20200417130034.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="https://www.holidify.com/images/cmsuploads/compressed/17145562344_0fb4268658_o_20180325050605.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b>Rail Museum</b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>The National Rail Museum in Chanakyapuri, New Delhi, displays exhibits on the history of rail transport in India. The museum was inaugurated on 1 February 1977. The museum spans over an area of over 11 acres and the indoor gallery.</p>
+          <p class="location" ><a href="https://goo.gl/maps/V3vaNC9teTYTstTD8"><i class="bi bi-geo-alt-fill"></i>Rail Museum, Delhi</a> </p>
+          <br><p class="location" ><button onclick="addToCart('Rail Museum', 4000, 'ABC Hotel', 'https://www.holidify.com/images/cmsuploads/compressed/17145562344_0fb4268658_o_20180325050605.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+    </div>
+</body>
+<script>
+  function addToCart(productName, price, acc, image) {
+    console.log(productName, price, acc, image);
+    var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    var isItemInCart = cartItems.some(function(item) {
+      return item.name === productName;
+    });
+
+    if (isItemInCart) {
+      alert('This item is already in your cart!');
+      return;
+    }
+
+    cartItems.push({ name: productName, price: price, acc: acc, image: image });
+    //console.log(cartItems)
+    
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+    alert('Item added to cart successfully!');
+  }
+</script>
+</html>
+
+

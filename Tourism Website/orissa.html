@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>orissa</title>
+  <link rel="stylesheet" href="tourcss.css">
+</head>
+<body>
+    <div class="places-text">
+        <h3>TOURISM IN ORISSA </h3>
+        <h4>FEATURED PLACES</h4>
+    </div>
+    <div class="card_main">
+    <div class="card">
+        <div class="card-image">
+          <img src="https://www.holidify.com/images/cmsuploads/compressed/2872_20190402151343.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b>Sun Temple </b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p> Built in the form of a giant rath or chariot of the Sun God, it depicts the chariot being pulled by a set of seven horses, four on the left side and three on the right. </p>
+          <p class="location" ><a href="https://goo.gl/maps/idosAMSxAZdwWgfQA"><i class="bi bi-geo-alt-fill"></i>Sun Temple, Konark </a></p>
+          <br><p class="location" ><button onclick="addToCart('Sun Temple',1500,'N Hotel','https://www.holidify.com/images/cmsuploads/compressed/2872_20190402151343.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="https://www.templepurohit.com/wp-content/uploads/2015/10/113.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b>Brahmeshwara Temple </b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>Bhubaneswar, the temple city of India, once known for its architecture and grand temples, is presently a thriving centre for commerce and business.</p>
+          <p class="location" ><a href="https://goo.gl/maps/X11B7NzHBFR5JAmA7"><i class="bi bi-geo-alt-fill"></i>Orissa </a></p>
+          <br><p class="location" ><button onclick="addToCart('Brahmeshwara Temple',2500,'M Hotel','https://www.templepurohit.com/wp-content/uploads/2015/10/113.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="http://www.eodishatourism.com/images/places/1030.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b> Khandadhar Falls</b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>Khandadhar Falls is located at Nandapani, Bonaigarh in Sundergarh district in the state of Odisha,India. It is the 12th highest waterfall in India.It is a perennial horse tail type waterfall</p>
+          <p class="location" ><a href="https://goo.gl/maps/3uzsYrQUnK3Hk8Ma9"><i class="bi bi-geo-alt-fill"></i>Sundergarh,Orissa </a></p>
+          <br><p class="location" ><button onclick="addToCart('Khandadhar Falls',2500,'QW Hotel','https://www.eodishatourism.com/images/places/1030.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="https://www.holidify.com/images/bgImages/TALASARI-BEACH.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b>Talasari Beach </b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>Located in Baleswar district of Odisha and at a distance of 10 Km from Digha, the Talasari beach is pristine, serene and has been bestowed with a spectacular panorama.</p>
+          <p class="location" ><a href="https://goo.gl/maps/rXG9GCD2JdfzQJJz8"><i class="bi bi-geo-alt-fill"></i>Baleswar, Odisha </a></p>
+          <br><p class="location" ><button onclick="addToCart('Talasari Beach',2300,'ER Hotel','https://www.holidify.com/images/bgImages/TALASARI-BEACH.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="http://www.eodishatourism.com/images/places/1024.jpg" alt="Image">
+        </div>
+        <div class="card-content">
+          <h2><b> Hirakud Dam</b></h2>
+          <div class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+          <p>Hirakud Dam is built across the Mahanadi River, about 15 kilometres from Sambalpur in the state of Odisha in India. Behind the dam extends a lake, Hirakud Reservoir, 55 km long</p>
+          <p class="location" ><a href="https://goo.gl/maps/aWb7REt6c9CMpxag6"><i class="bi bi-geo-alt-fill"></i>Hirakud,Orissa </a></p>
+          <br><p class="location" ><button onclick="addToCart('Hirakud Dam',2340,'TY Hotel','https://www.eodishatourism.com/images/places/1024.jpg')"><i class="bi bi-cart"></i>Add to cart</button> </p>
+        </div>
+      </div>
+
+     
+    </div>
+</body>
+<script>
+  function addToCart(productName, price, acc, image) {
+    console.log(productName, price, acc, image);
+    var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    var isItemInCart = cartItems.some(function(item) {
+      return item.name === productName;
+    });
+
+    if (isItemInCart) {
+      alert('This item is already in your cart!');
+      return;
+    }
+
+    cartItems.push({ name: productName, price: price, acc: acc, image: image });
+    //console.log(cartItems)
+    
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+    alert('Item added to cart successfully!');
+  }
+</script>
+</html>
